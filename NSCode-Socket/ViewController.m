@@ -81,18 +81,24 @@
     if (!self.isServer) {
         self.hostBtn.selected = YES;
     }
-    [sock readDataToLength:5 withTimeout:-1 tag:0];
+    [sock readDataWithTimeout:-1 tag:0];
+    
 }
+//
+
 //读取数据，回调方法
 - (void)onSocket:(AsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag {
     NSLog(@"read success");
-    NSString *msg = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
-    if (msg) {
+    if (tag == HEAD) {
+        NSString *msg = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+        int len = [msg intValue];
+        NSLog(@"len = %ld",(long)len);
+        [sock readDataToLength:len withTimeout:-1 tag:BODY];
+    }else if (tag == BODY) {
+        NSString *msg = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
         [self logMessage:msg color:[UIColor blackColor]];
-    }else {
-        NSLog(@"error - msg lose!");
+        [sock readDataWithTimeout:-1 tag:HEAD];
     }
-    [sock readDataToLength:5 withTimeout:-1 tag:0];
 }
 //将要断开连接
 - (void)onSocket:(AsyncSocket *)sock willDisconnectWithError:(NSError *)err {
@@ -165,12 +171,15 @@
         NSString *message = [NSString stringWithFormat:@"%@",self.sendT.text];
         self.sendT.text = nil;
         NSData *data = [message dataUsingEncoding:NSUTF8StringEncoding];
+        NSData *headData = [[NSString stringWithFormat:@"%ld",(unsigned long)message.length] dataUsingEncoding:NSUTF8StringEncoding];
         [self logMessage:message color:[UIColor blueColor]];
         if (self.isServer) {
             AsyncSocket *socket = [self.socketArray objectAtIndex:0];
-            [socket writeData:data withTimeout:-1 tag:0];
+            [socket writeData:headData withTimeout:-1 tag:HEAD];
+            [socket writeData:data withTimeout:-1 tag:BODY];
         }else {
-            [self.socket writeData:data withTimeout:-1 tag:0];
+            [self.socket writeData:headData withTimeout:-1 tag:HEAD ];
+            [self.socket writeData:data withTimeout:-1 tag:BODY];
         }
     }
 }
