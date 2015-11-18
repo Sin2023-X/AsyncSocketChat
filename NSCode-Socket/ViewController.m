@@ -91,11 +91,13 @@
     NSLog(@"read success");
     if (tag == HEAD) {
         NSString *msg = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
-        int len = [msg intValue];
-        NSLog(@"len = %ld",(long)len);
+        NSUInteger len = [msg integerValue];
+        NSLog(@"msg = %@,len = %ld",msg,(long)len);
+        [self logMessage:msg color:[UIColor redColor]];
         [sock readDataToLength:len withTimeout:-1 tag:BODY];
     }else if (tag == BODY) {
         NSString *msg = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+        NSLog(@"read msg = %@",msg);
         [self logMessage:msg color:[UIColor blackColor]];
         [sock readDataWithTimeout:-1 tag:HEAD];
     }
@@ -171,7 +173,10 @@
         NSString *message = [NSString stringWithFormat:@"%@",self.sendT.text];
         self.sendT.text = nil;
         NSData *data = [message dataUsingEncoding:NSUTF8StringEncoding];
-        NSData *headData = [[NSString stringWithFormat:@"%ld",(unsigned long)message.length] dataUsingEncoding:NSUTF8StringEncoding];
+        NSUInteger len = [data length];
+        NSData *headData = [[NSString stringWithFormat:@"%ld",(unsigned long)len] dataUsingEncoding:NSUTF8StringEncoding];
+        NSLog(@"msg len = %ld",(unsigned long)message.length);
+        [self logMessage:[NSString stringWithFormat:@"%ld",(unsigned long)len] color:[UIColor redColor]];
         [self logMessage:message color:[UIColor blueColor]];
         if (self.isServer) {
             AsyncSocket *socket = [self.socketArray objectAtIndex:0];
