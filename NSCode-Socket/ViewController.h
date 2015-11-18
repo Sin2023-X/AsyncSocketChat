@@ -1,6 +1,6 @@
 //
 //  ViewController.h
-//  NSCode-Socket
+//  communicateAsyncSocket
 //
 //  Created by admin on 15/11/17.
 //  Copyright © 2015年 zhengxinxin. All rights reserved.
