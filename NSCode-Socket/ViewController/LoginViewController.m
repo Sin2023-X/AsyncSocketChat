@@ -33,7 +33,6 @@
 //创建plist文件
 - (NSString *)returnPlistPath {
     NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
-    NSLog(@"pathd - %@",documentsPath);
     NSString *plistPath = [documentsPath stringByAppendingString:@"/user.plist"];
     return plistPath;
 }
