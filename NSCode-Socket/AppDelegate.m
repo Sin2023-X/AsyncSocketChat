@@ -7,7 +7,9 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ViewController.h"
+#import "LeftViewController.h"
+#import "LoginViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +18,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.YRC = [[YRSideViewController alloc]init];
+    ViewController *viewC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"chatView"];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:viewC];
+    LeftViewController *leftVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"left"];
+    self.YRC.rootViewController = nav;
+    self.YRC.leftViewController = leftVC;
+    self.YRC.leftViewShowWidth = self.window.frame.size.width * 1 / 2;
     return YES;
 }
 

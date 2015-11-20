@@ -7,16 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		845210B01BFEF90300E443EE /* test@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 845210AF1BFEF90300E443EE /* test@2x.png */; };
 		845A6D821BFB0BF0001B9DB3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845A6D811BFB0BF0001B9DB3 /* main.m */; };
 		845A6D851BFB0BF0001B9DB3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 845A6D841BFB0BF0001B9DB3 /* AppDelegate.m */; };
 		845A6D8D1BFB0BF0001B9DB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845A6D8C1BFB0BF0001B9DB3 /* Assets.xcassets */; };
 		845A6D901BFB0BF0001B9DB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845A6D8E1BFB0BF0001B9DB3 /* LaunchScreen.storyboard */; };
 		845A6D9B1BFB0BF0001B9DB3 /* NSCode_SocketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 845A6D9A1BFB0BF0001B9DB3 /* NSCode_SocketTests.m */; };
 		845A6DA61BFB0BF0001B9DB3 /* NSCode_SocketUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 845A6DA51BFB0BF0001B9DB3 /* NSCode_SocketUITests.m */; };
-		845A6DB51BFB0C0B001B9DB3 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 845A6DB41BFB0C0B001B9DB3 /* Message.m */; };
-		845A6DB81BFB0DE8001B9DB3 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 845A6DB71BFB0DE8001B9DB3 /* AsyncSocket.m */; };
-		845A6DBC1BFB0E66001B9DB3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845A6DBA1BFB0E66001B9DB3 /* ViewController.m */; };
 		845A6DBD1BFB0E66001B9DB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845A6DBB1BFB0E66001B9DB3 /* Main.storyboard */; };
+		84D2C5981BFDBBA9005AD4E9 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2C5881BFDBBA9005AD4E9 /* AsyncSocket.m */; };
+		84D2C5991BFDBBA9005AD4E9 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2C58A1BFDBBA9005AD4E9 /* Message.m */; };
+		84D2C59A1BFDBBA9005AD4E9 /* MyAttributedStringBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2C58C1BFDBBA9005AD4E9 /* MyAttributedStringBuilder.m */; };
+		84D2C59B1BFDBBA9005AD4E9 /* NSDate+FromString.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2C58E1BFDBBA9005AD4E9 /* NSDate+FromString.m */; };
+		84D2C59C1BFDBBA9005AD4E9 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2C5911BFDBBA9005AD4E9 /* LeftViewController.m */; };
+		84D2C59D1BFDBBA9005AD4E9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2C5931BFDBBA9005AD4E9 /* LoginViewController.m */; };
+		84D2C59E1BFDBBA9005AD4E9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2C5951BFDBBA9005AD4E9 /* ViewController.m */; };
+		84D2C59F1BFDBBA9005AD4E9 /* YRSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2C5971BFDBBA9005AD4E9 /* YRSideViewController.m */; };
+		84D2C5A21BFDC00C005AD4E9 /* SetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2C5A11BFDC00C005AD4E9 /* SetViewController.m */; };
+		84D2C5CC1BFDD532005AD4E9 /* DaiDodgeKeyboard+AccessObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2C5C51BFDD532005AD4E9 /* DaiDodgeKeyboard+AccessObject.m */; };
+		84D2C5CD1BFDD532005AD4E9 /* DaiDodgeKeyboard+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2C5C71BFDD532005AD4E9 /* DaiDodgeKeyboard+Animation.m */; };
+		84D2C5CE1BFDD532005AD4E9 /* DaiDodgeKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2C5C91BFDD532005AD4E9 /* DaiDodgeKeyboard.m */; };
+		84D2C5CF1BFDD532005AD4E9 /* UIView+FirstResponderNotify.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2C5CB1BFDD532005AD4E9 /* UIView+FirstResponderNotify.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		845210AF1BFEF90300E443EE /* test@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "test@2x.png"; sourceTree = "<group>"; };
 		845A6D7D1BFB0BF0001B9DB3 /* NSCode-Socket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NSCode-Socket.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		845A6D811BFB0BF0001B9DB3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		845A6D831BFB0BF0001B9DB3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -50,13 +62,33 @@
 		845A6DA11BFB0BF0001B9DB3 /* NSCode-SocketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NSCode-SocketUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		845A6DA51BFB0BF0001B9DB3 /* NSCode_SocketUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSCode_SocketUITests.m; sourceTree = "<group>"; };
 		845A6DA71BFB0BF0001B9DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		845A6DB31BFB0C0B001B9DB3 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
-		845A6DB41BFB0C0B001B9DB3 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
-		845A6DB61BFB0DE8001B9DB3 /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
-		845A6DB71BFB0DE8001B9DB3 /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
-		845A6DB91BFB0E66001B9DB3 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		845A6DBA1BFB0E66001B9DB3 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		845A6DBB1BFB0E66001B9DB3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		84D2C5871BFDBBA9005AD4E9 /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
+		84D2C5881BFDBBA9005AD4E9 /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
+		84D2C5891BFDBBA9005AD4E9 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		84D2C58A1BFDBBA9005AD4E9 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		84D2C58B1BFDBBA9005AD4E9 /* MyAttributedStringBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAttributedStringBuilder.h; sourceTree = "<group>"; };
+		84D2C58C1BFDBBA9005AD4E9 /* MyAttributedStringBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAttributedStringBuilder.m; sourceTree = "<group>"; };
+		84D2C58D1BFDBBA9005AD4E9 /* NSDate+FromString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+FromString.h"; sourceTree = "<group>"; };
+		84D2C58E1BFDBBA9005AD4E9 /* NSDate+FromString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+FromString.m"; sourceTree = "<group>"; };
+		84D2C5901BFDBBA9005AD4E9 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		84D2C5911BFDBBA9005AD4E9 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		84D2C5921BFDBBA9005AD4E9 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		84D2C5931BFDBBA9005AD4E9 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		84D2C5941BFDBBA9005AD4E9 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		84D2C5951BFDBBA9005AD4E9 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		84D2C5961BFDBBA9005AD4E9 /* YRSideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRSideViewController.h; sourceTree = "<group>"; };
+		84D2C5971BFDBBA9005AD4E9 /* YRSideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRSideViewController.m; sourceTree = "<group>"; };
+		84D2C5A01BFDC00C005AD4E9 /* SetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetViewController.h; sourceTree = "<group>"; };
+		84D2C5A11BFDC00C005AD4E9 /* SetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetViewController.m; sourceTree = "<group>"; };
+		84D2C5C41BFDD532005AD4E9 /* DaiDodgeKeyboard+AccessObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DaiDodgeKeyboard+AccessObject.h"; sourceTree = "<group>"; };
+		84D2C5C51BFDD532005AD4E9 /* DaiDodgeKeyboard+AccessObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DaiDodgeKeyboard+AccessObject.m"; sourceTree = "<group>"; };
+		84D2C5C61BFDD532005AD4E9 /* DaiDodgeKeyboard+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DaiDodgeKeyboard+Animation.h"; sourceTree = "<group>"; };
+		84D2C5C71BFDD532005AD4E9 /* DaiDodgeKeyboard+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DaiDodgeKeyboard+Animation.m"; sourceTree = "<group>"; };
+		84D2C5C81BFDD532005AD4E9 /* DaiDodgeKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaiDodgeKeyboard.h; sourceTree = "<group>"; };
+		84D2C5C91BFDD532005AD4E9 /* DaiDodgeKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaiDodgeKeyboard.m; sourceTree = "<group>"; };
+		84D2C5CA1BFDD532005AD4E9 /* UIView+FirstResponderNotify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FirstResponderNotify.h"; sourceTree = "<group>"; };
+		84D2C5CB1BFDD532005AD4E9 /* UIView+FirstResponderNotify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FirstResponderNotify.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,13 +141,11 @@
 			children = (
 				845A6D831BFB0BF0001B9DB3 /* AppDelegate.h */,
 				845A6D841BFB0BF0001B9DB3 /* AppDelegate.m */,
-				845A6DB61BFB0DE8001B9DB3 /* AsyncSocket.h */,
-				845A6DB71BFB0DE8001B9DB3 /* AsyncSocket.m */,
-				845A6DB31BFB0C0B001B9DB3 /* Message.h */,
-				845A6DB41BFB0C0B001B9DB3 /* Message.m */,
-				845A6DB91BFB0E66001B9DB3 /* ViewController.h */,
-				845A6DBA1BFB0E66001B9DB3 /* ViewController.m */,
+				84D2C5C31BFDD532005AD4E9 /* DaiDodgeKeyboard */,
+				84D2C5861BFDBBA9005AD4E9 /* vender */,
+				84D2C58F1BFDBBA9005AD4E9 /* ViewController */,
 				845A6DBB1BFB0E66001B9DB3 /* Main.storyboard */,
+				845210AF1BFEF90300E443EE /* test@2x.png */,
 				845A6D8C1BFB0BF0001B9DB3 /* Assets.xcassets */,
 				845A6D8E1BFB0BF0001B9DB3 /* LaunchScreen.storyboard */,
 				845A6D911BFB0BF0001B9DB3 /* Info.plist */,
@@ -148,6 +178,53 @@
 				845A6DA71BFB0BF0001B9DB3 /* Info.plist */,
 			);
 			path = "NSCode-SocketUITests";
+			sourceTree = "<group>";
+		};
+		84D2C5861BFDBBA9005AD4E9 /* vender */ = {
+			isa = PBXGroup;
+			children = (
+				84D2C5871BFDBBA9005AD4E9 /* AsyncSocket.h */,
+				84D2C5881BFDBBA9005AD4E9 /* AsyncSocket.m */,
+				84D2C5891BFDBBA9005AD4E9 /* Message.h */,
+				84D2C58A1BFDBBA9005AD4E9 /* Message.m */,
+				84D2C58B1BFDBBA9005AD4E9 /* MyAttributedStringBuilder.h */,
+				84D2C58C1BFDBBA9005AD4E9 /* MyAttributedStringBuilder.m */,
+				84D2C58D1BFDBBA9005AD4E9 /* NSDate+FromString.h */,
+				84D2C58E1BFDBBA9005AD4E9 /* NSDate+FromString.m */,
+			);
+			path = vender;
+			sourceTree = "<group>";
+		};
+		84D2C58F1BFDBBA9005AD4E9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84D2C5901BFDBBA9005AD4E9 /* LeftViewController.h */,
+				84D2C5911BFDBBA9005AD4E9 /* LeftViewController.m */,
+				84D2C5A01BFDC00C005AD4E9 /* SetViewController.h */,
+				84D2C5A11BFDC00C005AD4E9 /* SetViewController.m */,
+				84D2C5921BFDBBA9005AD4E9 /* LoginViewController.h */,
+				84D2C5931BFDBBA9005AD4E9 /* LoginViewController.m */,
+				84D2C5941BFDBBA9005AD4E9 /* ViewController.h */,
+				84D2C5951BFDBBA9005AD4E9 /* ViewController.m */,
+				84D2C5961BFDBBA9005AD4E9 /* YRSideViewController.h */,
+				84D2C5971BFDBBA9005AD4E9 /* YRSideViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		84D2C5C31BFDD532005AD4E9 /* DaiDodgeKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				84D2C5C41BFDD532005AD4E9 /* DaiDodgeKeyboard+AccessObject.h */,
+				84D2C5C51BFDD532005AD4E9 /* DaiDodgeKeyboard+AccessObject.m */,
+				84D2C5C61BFDD532005AD4E9 /* DaiDodgeKeyboard+Animation.h */,
+				84D2C5C71BFDD532005AD4E9 /* DaiDodgeKeyboard+Animation.m */,
+				84D2C5C81BFDD532005AD4E9 /* DaiDodgeKeyboard.h */,
+				84D2C5C91BFDD532005AD4E9 /* DaiDodgeKeyboard.m */,
+				84D2C5CA1BFDD532005AD4E9 /* UIView+FirstResponderNotify.h */,
+				84D2C5CB1BFDD532005AD4E9 /* UIView+FirstResponderNotify.m */,
+			);
+			path = DaiDodgeKeyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +331,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845210B01BFEF90300E443EE /* test@2x.png in Resources */,
 				845A6DBD1BFB0E66001B9DB3 /* Main.storyboard in Resources */,
 				845A6D901BFB0BF0001B9DB3 /* LaunchScreen.storyboard in Resources */,
 				845A6D8D1BFB0BF0001B9DB3 /* Assets.xcassets in Resources */,
@@ -281,11 +359,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				845A6DB81BFB0DE8001B9DB3 /* AsyncSocket.m in Sources */,
-				845A6DB51BFB0C0B001B9DB3 /* Message.m in Sources */,
+				84D2C5CD1BFDD532005AD4E9 /* DaiDodgeKeyboard+Animation.m in Sources */,
+				84D2C59E1BFDBBA9005AD4E9 /* ViewController.m in Sources */,
+				84D2C59F1BFDBBA9005AD4E9 /* YRSideViewController.m in Sources */,
+				84D2C5991BFDBBA9005AD4E9 /* Message.m in Sources */,
+				84D2C59B1BFDBBA9005AD4E9 /* NSDate+FromString.m in Sources */,
+				84D2C59C1BFDBBA9005AD4E9 /* LeftViewController.m in Sources */,
+				84D2C59D1BFDBBA9005AD4E9 /* LoginViewController.m in Sources */,
+				84D2C5CF1BFDD532005AD4E9 /* UIView+FirstResponderNotify.m in Sources */,
+				84D2C5981BFDBBA9005AD4E9 /* AsyncSocket.m in Sources */,
 				845A6D851BFB0BF0001B9DB3 /* AppDelegate.m in Sources */,
+				84D2C5CC1BFDD532005AD4E9 /* DaiDodgeKeyboard+AccessObject.m in Sources */,
+				84D2C5A21BFDC00C005AD4E9 /* SetViewController.m in Sources */,
+				84D2C59A1BFDBBA9005AD4E9 /* MyAttributedStringBuilder.m in Sources */,
 				845A6D821BFB0BF0001B9DB3 /* main.m in Sources */,
-				845A6DBC1BFB0E66001B9DB3 /* ViewController.m in Sources */,
+				84D2C5CE1BFDD532005AD4E9 /* DaiDodgeKeyboard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +595,7 @@
 				845A6DAC1BFB0BF0001B9DB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		845A6DAD1BFB0BF0001B9DB3 /* Build configuration list for PBXNativeTarget "NSCode-SocketTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +604,7 @@
 				845A6DAF1BFB0BF0001B9DB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		845A6DB01BFB0BF0001B9DB3 /* Build configuration list for PBXNativeTarget "NSCode-SocketUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +613,7 @@
 				845A6DB21BFB0BF0001B9DB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
