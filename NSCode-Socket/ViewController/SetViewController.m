@@ -10,6 +10,7 @@
 
 @interface SetViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *nameT;
+@property (weak, nonatomic) IBOutlet UIButton *changeBtn;
 
 @end
 
@@ -17,17 +18,38 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
+}
+- (void)viewWillAppear:(BOOL)animated {
+    self.nameT.userInteractionEnabled = NO;
+    self.changeBtn.selected = NO;
+    self.nameT.text = [[NSUserDefaults standardUserDefaults]valueForKey:@"username"];
+    NSLog(@"username = %@",self.nameT.text);
+    
 }
 - (IBAction)changeName:(id)sender {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if (![self.nameT.text isEqualToString:@""]) {
-        [defaults setValue:self.nameT.text forKey:@"username"];
+    if (self.changeBtn.selected == NO) {
+        self.changeBtn.selected = YES;
+        self.nameT.userInteractionEnabled = YES;
+        [self.nameT becomeFirstResponder];
+        self.nameT.clearButtonMode = UITextFieldViewModeWhileEditing;
+    }else {
+        self.changeBtn.selected = NO;
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        UIAlertView *alt = [[UIAlertView alloc]initWithTitle:@"提示" message:nil delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil];
+        if (![self.nameT.text isEqualToString:@""]) {
+            [defaults setValue:self.nameT.text forKey:@"username"];
+            alt.message = @"修改成功！";
+            [self.nameT resignFirstResponder];
+            self.nameT.userInteractionEnabled = NO;
+        }else {
+            alt.message = @"用户名不能为空！";
+        }
+        [alt show];
     }
-    self.nameT.text = nil;
-    UIAlertView *alt = [[UIAlertView alloc]initWithTitle:@"提示" message:@"修改成功" delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil];
-    [alt show];
-    [self.nameT resignFirstResponder];
+    
 }
 
 - (IBAction)backToLeftView:(id)sender {

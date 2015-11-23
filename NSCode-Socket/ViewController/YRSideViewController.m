@@ -235,7 +235,7 @@
             }
         }
         return;
-    }
+    }//
     CGPoint currentPostion = [pan translationInView:_baseView];
     CGFloat xoffset = _startPanPoint.x + currentPostion.x;
     if (xoffset>0) {//向右滑

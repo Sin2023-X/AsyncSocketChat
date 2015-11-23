@@ -70,15 +70,23 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [DaiDodgeKeyboard removeRegisterTheViewNeedDodgeKeyboard];
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
     [self.socket disconnect];
     self.socket.userData = 1;
 }
 - (void)viewDidAppear:(BOOL)animated {
     [DaiDodgeKeyboard addRegisterTheViewNeedDodgeKeyboard:self.view];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(scrollToBottom) name:UIKeyboardDidShowNotification object:nil];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.superview.backgroundColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
+    [[UIApplication sharedApplication]setStatusBarStyle:UIStatusBarStyleLightContent];
     self.frame = self.view.frame;
+    self.view.backgroundColor = [UIColor whiteColor];
     self.navigationController.navigationBar.translucent = NO;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(hiddenKeyboard:)];
     [self.msgTextView addGestureRecognizer:tap];
@@ -88,13 +96,21 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"菜单" style:UIBarButtonItemStylePlain target:self action:@selector(setAction)];
     self.navigationController.navigationBar.translucent = NO;
 }
+#pragma mark TextFieldDelegate
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    self.view.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + 64, self.frame.size.width, self.frame.size.height-64);
+}
+//找到view上的键盘
+
 //回首键盘轻拍手势
 - (void)hiddenKeyboard:(UITapGestureRecognizer *)tap {
     [self.sendT resignFirstResponder];
     self.view.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + 64, self.frame.size.width, self.frame.size.height-64);
+    [self scrollToBottom];
 }
 //设置显示侧边栏按钮
 - (void)setAction {
+    [self.sendT resignFirstResponder];
     AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     [delegate.YRC showLeftViewController:YES];
 }
@@ -116,7 +132,6 @@
 //连接成功，回调方法
 - (void)onSocket:(AsyncSocket *)sock didConnectToHost:(NSString *)host port:(UInt16)port {
     NSLog(@"connect success!---%d",self.socket.isConnected);
-
     [sock readDataToLength:2 withTimeout:-1 tag:HEAD];
 
 }
@@ -178,8 +193,6 @@
             [alt show];
             
             return;
-        }else {
-            [self.sendT resignFirstResponder];
         }
         if (self.isServer) {
             AsyncSocket *socket = [self.socketArray objectAtIndex:0];
@@ -199,7 +212,6 @@
 #pragma mark 界面显示
 - (void)scrollToBottom {
     if (self.msgTextView.contentSize.height > self.msgTextView.frame.size.height) {
-        [self.msgTextView setContentOffset:CGPointMake(0.f,self.msgTextView.contentSize.height-self.msgTextView.frame.size.height)];
         [self.msgTextView scrollRangeToVisible:NSMakeRange(self.msgTextView.text.length, 1)];
     }
 }
@@ -213,7 +225,7 @@
     //设置时间信息显示样式
     NSString *dateStr = [message substringToIndex:19];
     [builder includeString:dateStr all:YES].font = [UIFont systemFontOfSize:15];
-    [builder includeString:dateStr all:YES].textColor = [UIColor lightGrayColor];
+    [builder includeString:dateStr all:YES].textColor = [UIColor whiteColor];
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc]init];
     paragraphStyle.alignment = NSTextAlignmentCenter;
     [builder includeString:dateStr all:YES].paragraphStyle = paragraphStyle;

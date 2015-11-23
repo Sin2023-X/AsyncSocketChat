@@ -12,6 +12,8 @@
 #import "AppDelegate.h"
 @interface LoginViewController ()<AsyncSocketDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *IPT;
+
+@property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 @property (strong,nonatomic)AsyncSocket *socket;
 @end
 
@@ -30,6 +32,7 @@
     NSDictionary *dic = @{@"port":@"3000"};
     [dic writeToFile:plistPath atomically:YES];
 }
+
 //创建plist文件
 - (NSString *)returnPlistPath {
     NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
@@ -55,6 +58,7 @@
 - (void)onSocket:(AsyncSocket *)sock didConnectToHost:(NSString *)host port:(UInt16)port {
     NSLog(@"connect success!");
     AppDelegate *delegate = [UIApplication sharedApplication].delegate;
+    [[NSUserDefaults standardUserDefaults]setValue:[self.socket localHost] forKey:@"username"];
     delegate.strIP = self.IPT.text;
     [self presentViewController:delegate.YRC animated:YES completion:nil];
 }
