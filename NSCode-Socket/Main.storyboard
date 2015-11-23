@@ -88,28 +88,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7G4-2r-AKc">
-                                <rect key="frame" x="530" y="565" width="60" height="30"/>
+                                <rect key="frame" x="530" y="555" width="60" height="40"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.0020719666389999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="NZD-g3-NkG"/>
-                                    <constraint firstAttribute="height" constant="30" id="jEz-mK-bAi"/>
+                                    <constraint firstAttribute="height" constant="40" id="jEz-mK-bAi"/>
                                 </constraints>
                                 <state key="normal" title="send">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="send:" destination="BYZ-38-t0r" eventType="touchUpInside" id="COn-nh-R5d"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lVV-Z3-qen">
-                                <rect key="frame" x="10" y="565" width="510" height="30"/>
+                                <rect key="frame" x="10" y="555" width="510" height="40"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSx-Wy-FZT">
-                                <rect key="frame" x="0.0" y="20" width="600" height="540"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="530"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.25490196079999999" green="0.76470588240000004" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -117,7 +125,7 @@
                             </textView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.25490196079999999" green="0.76470588240000004" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7G4-2r-AKc" secondAttribute="bottom" constant="5" id="GJ5-7K-8iL"/>
                             <constraint firstAttribute="trailing" secondItem="cSx-Wy-FZT" secondAttribute="trailing" id="OM2-ZQ-RFL"/>

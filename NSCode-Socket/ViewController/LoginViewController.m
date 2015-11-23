@@ -32,7 +32,9 @@
     NSDictionary *dic = @{@"port":@"3000"};
     [dic writeToFile:plistPath atomically:YES];
 }
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.IPT resignFirstResponder];
+}
 //创建plist文件
 - (NSString *)returnPlistPath {
     NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
